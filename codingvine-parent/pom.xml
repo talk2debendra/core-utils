@@ -1,0 +1,302 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.codingvine.core</groupId>
+	<artifactId>codingvine-parent</artifactId>
+	<version>1.0.0</version>
+	<packaging>pom</packaging>
+
+	<name>codingvine-parent</name>
+	<url>https://javabydeb.blogspot.com/</url>
+
+	<inceptionYear>2020</inceptionYear>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.2.6.RELEASE</version>
+	</parent>
+
+	<properties>
+
+		<global.version>1.0.0</global.version>
+
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+		<servlet-api.version>4.0.1</servlet-api.version>
+
+		<jackson-databind.version>2.9.8</jackson-databind.version>
+		<jackson.mapper.asl.version>1.9.12</jackson.mapper.asl.version>
+
+		<!-- jsr250 Version -->
+		<jsr250.version>2.7.0</jsr250.version>
+
+		<lombok.version>1.18.10</lombok.version>
+		
+		
+		<!-- Apache Commons version -->
+		<commons-vfs2.version>2.0</commons-vfs2.version>
+		<commons.io.version>2.6</commons.io.version>
+		<commons-lang3.version>3.9</commons-lang3.version>
+		<commons-collections4.version>4.4</commons-collections4.version>
+		<commons-text.version>1.8</commons-text.version>
+		<commons.validator.version>1.6</commons.validator.version>
+		<commons.fileupload.version>1.4</commons.fileupload.version>
+		<commons-csv.version>1.7</commons-csv.version>
+
+		<!-- guava Version -->
+		<guava.version>20.0</guava.version>
+
+		<!-- Swagger Version -->
+		<swagger.version>1.0.2</swagger.version>
+		<swagger.core.version>1.0</swagger.core.version>
+		<springfox.swagger.version>2.9.2</springfox.swagger.version>
+		<swagger.jersey2.version>1.5.13</swagger.jersey2.version>
+
+		<!-- @PostContruct Dependency -->
+		<jrs250-api.version>1.0</jrs250-api.version>
+
+		<!-- okhttp -->
+		<okhttp.version>2.7.5</okhttp.version>
+
+		<httpclient.version>4.5.6</httpclient.version>
+
+		<!-- quartz Version -->
+		<quartz.version>2.3.2</quartz.version>
+
+		<!-- Hibernate Version -->
+		<hibernate.version>5.0.12.Final</hibernate.version>
+		<hibernate-validator.version>6.0.10.Final</hibernate-validator.version>
+		<c3p0.version>0.9.5.4</c3p0.version>
+
+		<jsonevent-layout.version>1.7</jsonevent-layout.version>
+
+		<json-lib.version>2.4</json-lib.version>
+		<json-lib.classifier>jdk15</json-lib.classifier>
+
+		<!-- JBCrypt Version -->
+		<jbcrypt.version>0.4</jbcrypt.version>
+
+        
+		<!-- assertJ Version -->
+		<assertJ.version>3.10.0</assertJ.version>
+		<spring-boot-starter-log4j2.version>2.1.3.RELEASE</spring-boot-starter-log4j2.version>
+		
+		<!-- Power Mock -->
+		<powermock.version>2.0.2</powermock.version>
+	</properties>
+
+	<dependencyManagement>
+
+		<dependencies>
+
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>javax.servlet-api</artifactId>
+				<version>${servlet-api.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>commons-io</groupId>
+				<artifactId>commons-io</artifactId>
+				<version>${commons.io.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.codehaus.jackson</groupId>
+				<artifactId>jackson-mapper-asl</artifactId>
+				<version>${jackson.mapper.asl.version}</version>
+			</dependency>
+
+			<!-- apache dependency -->
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-vfs2</artifactId>
+				<version>${commons-vfs2.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-lang3</artifactId>
+				<version>${commons-lang3.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-collections4</artifactId>
+				<version>${commons-collections4.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-text</artifactId>
+				<version>${commons-text.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>commons-validator</groupId>
+				<artifactId>commons-validator</artifactId>
+				<version>${commons.validator.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>commons-fileupload</groupId>
+				<artifactId>commons-fileupload</artifactId>
+				<version>${commons.fileupload.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-csv</artifactId>
+				<version>${commons-csv.version}</version>
+			</dependency>
+
+
+			<!-- Guava Library -->
+			<dependency>
+				<groupId>com.google.guava</groupId>
+				<artifactId>guava</artifactId>
+				<version>${guava.version}</version>
+			</dependency>
+
+			<!-- Swagger Dependency -->
+			<dependency>
+				<groupId>io.swagger</groupId>
+				<artifactId>swagger-jersey2-jaxrs</artifactId>
+				<version>${swagger.jersey2.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.mangofactory</groupId>
+				<artifactId>swagger-springmvc</artifactId>
+				<version>${swagger.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.wordnik</groupId>
+				<artifactId>swagger-core</artifactId>
+				<version>${swagger.core.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>javax.annotation</groupId>
+				<artifactId>jsr250-api</artifactId>
+				<version>${jrs250-api.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>io.springfox</groupId>
+				<artifactId>springfox-swagger-ui</artifactId>
+				<version>${springfox.swagger.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>io.springfox</groupId>
+				<artifactId>springfox-swagger2</artifactId>
+				<version>${springfox.swagger.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.squareup.okhttp</groupId>
+				<artifactId>okhttp</artifactId>
+				<version>${okhttp.version}</version>
+			</dependency>
+
+
+			<dependency>
+				<groupId>org.quartz-scheduler</groupId>
+				<artifactId>quartz</artifactId>
+				<version>${quartz.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.mchange</groupId>
+				<artifactId>c3p0</artifactId>
+				<version>${c3p0.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-c3p0</artifactId>
+				<version>${hibernate.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.hibernate.validator</groupId>
+				<artifactId>hibernate-validator</artifactId>
+				<version>${hibernate-validator.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-databind</artifactId>
+				<version>${jackson-databind.version}</version>
+			</dependency>
+
+
+			<dependency>
+				<groupId>de.svenkubiak</groupId>
+				<artifactId>jBCrypt</artifactId>
+				<version>${jbcrypt.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>net.sf.opencsv</groupId>
+				<artifactId>opencsv</artifactId>
+				<version>${opencsv.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-aws-context</artifactId>
+				<version>${spring-cloud-aws-context.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-log4j2</artifactId>
+				<version>${spring-boot-starter-log4j2.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.json</groupId>
+				<artifactId>json</artifactId>
+				<version>20180130</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.powermock</groupId>
+				<artifactId>powermock-module-junit4</artifactId>
+				<version>${powermock.version}</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.powermock</groupId>
+				<artifactId>powermock-api-mockito2</artifactId>
+				<version>${powermock.version}</version>
+				<scope>test</scope>
+			</dependency>
+		</dependencies>
+
+	</dependencyManagement>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<modules>
+		<module>..</module>
+	</modules>
+
+</project>

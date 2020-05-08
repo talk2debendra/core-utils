@@ -1,0 +1,41 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+                            http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<artifactId>kafka</artifactId>
+	<packaging>jar</packaging>
+
+	<description>Kafka client wrapper</description>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>com.codingvine.core</groupId>
+			<artifactId>base</artifactId>
+			<version>${global.version}</version>
+		</dependency>
+
+	<!-- 	<dependency>
+			<groupId>com.codingvine.core</groupId>
+			<artifactId>properties</artifactId>
+			<version>${global.version}</version>
+		</dependency> -->
+
+		<dependency>
+			<groupId>org.springframework.kafka</groupId>
+			<artifactId>spring-kafka</artifactId>
+		</dependency>
+
+	</dependencies>
+
+	<parent>
+		<groupId>com.codingvine.core</groupId>
+		<artifactId>core-utils</artifactId>
+		<version>1.0.0</version>
+		<relativePath>..</relativePath>
+	</parent>
+
+</project>
